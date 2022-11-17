@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RestaurantProject.DataLayer.DtoModels;
+using RestaurantProject.DataLayer.DtoModels.Restaraunt;
 
 namespace RestaurantProject.DataLayer
 {

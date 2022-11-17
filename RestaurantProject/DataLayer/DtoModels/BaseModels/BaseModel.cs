@@ -1,4 +1,4 @@
-﻿namespace RestaurantProject.DataLayer
+﻿namespace RestaurantProject.DataLayer.DtoModels.Base
 {
     public abstract class BaseModel
     {
