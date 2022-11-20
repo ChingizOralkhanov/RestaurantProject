@@ -1,11 +1,9 @@
 ﻿Business Requirements
-Imagine that you’ve been hired to develop a small restaurant management application.
-
-Your customer has a small restaurant with a bar, so the bills for food and drinks have to be separated.
-
+Your customer has a small restaurant with a bar, 
+so the bills for food and drinks have to be separated.
 There is a limited quantity of 20 tables in the restaurant together with finite number of 5 waiters.
 
-A waiter serving time is random between 1 and 3 minutes.
+A waiter serving time is random between 1 and 3 minutes. ?
 
 When a new visitor requests a table, a free waiter should respond and propose free tables. 
 If there are no free waiters, the application should inform the visitor and decline the request. 
@@ -20,18 +18,24 @@ Alcoholic drinks available on the menu are for adult visitors only.
 Available dishes and drinks are prepared with the ingredients described in the recipe.
 
 Available dishes and drinks have to be on one menu, divided into categories. 
-Availability of dishes and drinks depends on the quantity of the needed ingredients , which are refilled periodically with a specific time interval.
+Availability of dishes and drinks depends on the quantity of the needed ingredients , 
+which are refilled periodically with a specific time interval.
 
 Each dish and drink take some time to cook/prepare. 
 Depending on that parameter, the order could be served to a visitor as a one unit or as separate items.
 
 When an item of an order is ready for serving, one of the free waiters should respond to the notification from the kitchen or bar and bring the item to the correct table.
 
-Visitor should be able to pay for the served dishes and leave at any time. There should be several payment options for visitor’s convenience.
+Visitor should be able to pay for the served dishes and leave at any time. 
+There should be several payment options for visitor’s convenience.
 
 Additional Technical Requirements
-There is no restriction on technology stack that could be chosen for the user interface implementation. However, implementing Graphical UI is not obligatory.
+There is no restriction on technology stack that could be chosen for the user interface implementation. 
+However, implementing Graphical UI is not obligatory.
 
-The application could be a web application, desktop application or even console, that is completely up to you.
+The application could be a web application, desktop application or even console, 
+that is completely up to you.
 
-There is also no restriction on how you will manage the state of your application. But you definitely should manage it somehow. Every time the application is launched, it should start from the point where it stopped and maintain the state during execution.
+There is also no restriction on how you will manage the state of your application. 
+But you definitely should manage it somehow. Every time the application is launched, 
+it should start from the point where it stopped and maintain the state during execution.
