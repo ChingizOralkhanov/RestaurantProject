@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using RestaurantProject.DataLayer.DtoModels;
+using RestaurantProject.Exceptions;
 using RestaurantProject.Interfaces.Repositories;
 using RestaurantProject.Interfaces.Services;
 using RestaurantProject.ViewModels;
@@ -17,8 +19,8 @@ namespace RestaurantProject.Services
 
         public async Task<RestarauntViewModel> GetRestaraunt(Guid id)
         {
-            var restaraunt =  await _restarauntRepository.GetRestaraunt(id);
-            if (restaraunt == null) throw new ArgumentNullException();
+            var restaraunt =  await _restarauntRepository.GetByIdAsync(id);
+            if (restaraunt == null) throw new EntityNotFoundException(nameof(Restaraunt));
             return _mapper.Map<RestarauntViewModel>(restaraunt);
         }
     }

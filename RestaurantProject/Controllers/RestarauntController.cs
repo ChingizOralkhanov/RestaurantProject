@@ -12,16 +12,13 @@ namespace RestaurantProject.Controllers
     {
         private readonly ILogger<RestarauntController> _logger;
         private readonly IRestarauntService _restarauntService;
-        private readonly IRestarauntRepository _restarauntRepository;
         private readonly IMapper _mapper;
         public RestarauntController(ILogger<RestarauntController> logger,
             IRestarauntService restarauntService,
-            IRestarauntRepository restarauntRepository,
             IMapper mapper)
         {
             _logger = logger;
             _restarauntService = restarauntService;
-            _restarauntRepository = restarauntRepository;
             _mapper = mapper;
         }
 

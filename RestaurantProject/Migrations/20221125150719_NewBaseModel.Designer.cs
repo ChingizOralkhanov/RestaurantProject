@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RestaurantProject.DataLayer;
 
@@ -11,9 +12,11 @@ using RestaurantProject.DataLayer;
 namespace RestaurantProject.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class RestarauntDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221125150719_NewBaseModel")]
+    partial class NewBaseModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -83,10 +86,6 @@ namespace RestaurantProject.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
@@ -117,10 +116,6 @@ namespace RestaurantProject.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
@@ -191,9 +186,8 @@ namespace RestaurantProject.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Name")
+                        .HasColumnType("int");
 
                     b.Property<Guid?>("RestarauntId")
                         .HasColumnType("uniqueidentifier");

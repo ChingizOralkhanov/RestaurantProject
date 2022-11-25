@@ -2,9 +2,7 @@
 
 namespace RestaurantProject.Interfaces.Repositories
 {
-    public interface ICustomerRepository
+    public interface ICustomerRepository : IBaseRepository<Customer>
     {
-        public Task BookTable(Guid tableId, Guid customerId);
-        public Task<Customer> GetCustomer(Guid id);
     }
 }

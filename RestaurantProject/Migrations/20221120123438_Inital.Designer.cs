@@ -11,7 +11,7 @@ using RestaurantProject.DataLayer;
 
 namespace RestaurantProject.Migrations
 {
-    [DbContext(typeof(RestarauntDbContext))]
+    [DbContext(typeof(AppDbContext))]
     [Migration("20221120123438_Inital")]
     partial class Inital
     {
